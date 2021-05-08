@@ -30,21 +30,25 @@ body {
 /* Navbar */
 
 .navbar {
+  position: relative;
   background-color: #fff;
   padding: 1rem 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar-brand {
+  display: inline-block;
   font-size: 1.25rem;
   color: var(--primary-color) !important;
   padding: 0 !important;
 }
 
 .navbar-nav {
-  text-align: center;
+  /* text-align: center; */
+  /* display: flex; */
 }
 
 .nav-item {
@@ -72,6 +76,11 @@ body {
   margin: 0 1.25rem;
   right: 0;
   background-color: var(--primary-color);
+}
+
+.navbar-toggler {
+  font-size: 2rem;
+  display: none;
 }
 
 /* Hero */
@@ -219,6 +228,36 @@ main {
 }
 
 @media (max-width: 575.98px) {
+  .navbar-collapse {
+    display: none;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(900px, 0);
+    transform: translate(900px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler {
+    display: inline-block;
+  }
+
+  .open {
+    display: block;
+    flex-basis: 100%;
+    flex-grow: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .open .navbar-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 1rem;
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }
@@ -229,6 +268,30 @@ main {
 
   .hero-tagline {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 600px) {
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: inline-block;
+  }
+
+  .open .navbar-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767.98px) {
+  .navbar-toggler {
+    display: none;
   }
 }
 
@@ -261,4 +324,8 @@ footer {
   background-color: #fff;
   margin-top: 2rem;
   border-top: 1px solid rgba(0, 0, 0, .025);
+}
+
+.p-0 {
+  padding: 0 !important;
 }

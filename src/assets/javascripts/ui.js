@@ -34,6 +34,26 @@ class UI {
     restaurantContainerElement.innerHTML = cardComponent;
     ellipsis('.card-description', 5);
   }
+
+  static setHamburgerMenu() {
+    const menu = document.querySelector('.navbar-toggler');
+    const hero = document.querySelector('.hero');
+    const main = document.querySelector('main');
+    const navbar = document.querySelector('.navbar-collapse');
+
+    menu.addEventListener('click', function (event) {
+        navbar.classList.toggle('open');
+        event.stopPropagation();
+    });
+
+    hero.addEventListener('click', function () {
+        navbar.classList.remove('open');
+    });
+
+    main.addEventListener('click', function () {
+        navbar.classList.remove('open');
+    });
+  }
 }
 
 export default UI;

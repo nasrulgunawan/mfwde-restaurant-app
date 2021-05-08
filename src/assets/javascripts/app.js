@@ -5,4 +5,5 @@ import logo from '../images/logo.svg';
 
 document.querySelector('.navbar-brand img').src = logo;
 
+UI.setHamburgerMenu();
 UI.renderRestaurantMenu();
