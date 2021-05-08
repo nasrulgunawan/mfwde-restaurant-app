@@ -200,8 +200,7 @@ main {
   line-height: 2rem;
 }
 
-.rating,
-.verified-restaurant {
+.rating {
   display: flex;
   align-items: center;
 }
@@ -214,6 +213,14 @@ main {
 .icon {
   width: 1.5rem;
   height: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.verified-restaurant {
+  position: absolute;
+  top: .45rem;
+  right: .45rem;
 }
 
 .text-small {
