@@ -222,6 +222,14 @@ main {
   .cards {
     grid-template-columns: 1fr;
   }
+
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -246,4 +254,11 @@ main {
    .cards {
      grid-template-columns: repeat(6, 1fr);
    }
+}
+
+footer {
+  padding: 1.5rem 0;
+  background-color: #fff;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, .025);
 }
