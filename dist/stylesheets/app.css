@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #fa942a;
+  --text-color: #223344;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9fefa;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+.content-header {
+  margin: 3rem 0 2rem;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+
+.navbar {
+  position: relative;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: inline-block;
+  font-size: 1.25rem;
+  color: var(--primary-color) !important;
+  padding: 0 !important;
+}
+
+.nav-item {
+  display: inline-block;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 8px 16px;
+  color: #495764;
+}
+
+.nav-item.active a, .nav-item a:hover {
+  color: var(--text-color);
+}
+
+.nav-item.active::after {
+  border-radius: 3px;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 3px;
+  left: 0;
+  margin: 0 1.25rem;
+  right: 0;
+  background-color: var(--primary-color);
+}
+
+.navbar-toggler {
+  font-size: 2rem;
+  display: none;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(250, 148, 42, .65)),
+              var(--primary-color) url("../images/hero.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hero-container {
+  margin: 0 auto;
+}
+
+.hero-heading {
+  color: #fff;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.hero-tagline {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-center {
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* Card */
+
+.post-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 300px;
+  flex-direction: column;
+  display: flex;
+  background-color: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 8px 28px 50px rgba(39, 44, 49, .07), 1px 6px 12px rgba(39, 44, 49, .04);
+  transition: all .4s ease;
+  transform: translate3D(0, -1px, 0) scale(1.02);
+}
+
+.card-img {
+  position: relative;
+  flex: 1 1 auto;
+  border-radius: .25rem;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.card-body {
+  flex: 0 1 250px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+  position: relative;
+  flex-grow: 1;
+  padding: .5rem 0;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-footer img {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: 2rem;
+  height: 2rem;
+}
+
+.card-footer p {
+  line-height: 2rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating .icon {
+  margin-right: 0.25rem;
+  color: var(--primary-color);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.verified-restaurant {
+  position: absolute;
+  top: .45rem;
+  right: .45rem;
+}
+
+.text-small {
+  font-weight: 300;
+  font-size: .95rem;
+  color: #444;
+}
+
+.text-green {
+  color: #41c485;
+}
+
+@media (max-width: 575.98px) {
+  .navbar-collapse {
+    display: none;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(900px, 0);
+    transform: translate(900px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler {
+    display: inline-block;
+  }
+
+  .open {
+    display: block;
+    flex-basis: 100%;
+    flex-grow: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .open .navbar-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 600px) {
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: inline-block;
+  }
+
+  .open .navbar-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767.98px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+   .cards {
+     grid-template-columns: repeat(6, 1fr);
+   }
+}
+
+footer {
+  padding: 1.5rem 0;
+  background-color: #fff;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, .025);
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
