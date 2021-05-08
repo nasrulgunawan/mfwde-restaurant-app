@@ -11,6 +11,10 @@
   --text-color: #223344;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f9fefa;
   font-family: 'Poppins', sans-serif;
@@ -44,11 +48,6 @@ body {
   font-size: 1.25rem;
   color: var(--primary-color) !important;
   padding: 0 !important;
-}
-
-.navbar-nav {
-  /* text-align: center; */
-  /* display: flex; */
 }
 
 .nav-item {
@@ -328,4 +327,18 @@ footer {
 
 .p-0 {
   padding: 0 !important;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
