@@ -319,7 +319,13 @@ main {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+   .cards {
+     grid-template-columns: repeat(4, 1fr);
+   }
+}
+
+@media (min-width: 1600px) {
    .cards {
      grid-template-columns: repeat(6, 1fr);
    }
