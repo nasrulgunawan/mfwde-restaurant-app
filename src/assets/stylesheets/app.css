@@ -57,7 +57,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  padding: 8px 16px;
+  padding: .75rem 1rem;
   color: #495764;
 }
 
@@ -80,6 +80,7 @@ body {
 .navbar-toggler {
   font-size: 2rem;
   display: none;
+  padding: 0 .5rem !important;
 }
 
 /* Hero */
@@ -336,10 +337,6 @@ footer {
   background-color: #fff;
   margin-top: 2rem;
   border-top: 1px solid rgba(0, 0, 0, .025);
-}
-
-.p-0 {
-  padding: 0 !important;
 }
 
 .skip-link {
