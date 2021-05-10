@@ -45,18 +45,13 @@ class UI {
     const main = document.querySelector('main');
     const navbar = document.querySelector('.navbar-collapse');
 
-    menu.addEventListener('click', function (event) {
+    menu.addEventListener('click', event => {
       navbar.classList.toggle('open');
       event.stopPropagation();
     });
 
-    hero.addEventListener('click', function () {
-      navbar.classList.remove('open');
-    });
-
-    main.addEventListener('click', function () {
-      navbar.classList.remove('open');
-    });
+    hero.addEventListener('click', () => navbar.classList.remove('open'));
+    main.addEventListener('click', () => navbar.classList.remove('open'));
   }
 
   static setBrandImage() {
