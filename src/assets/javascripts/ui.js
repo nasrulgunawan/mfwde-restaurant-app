@@ -7,9 +7,11 @@ class UI {
     const restaurantContainerElement = document.querySelector('.cards');
     let cardComponent = '';
 
-    data.restaurants.forEach(menu => {
-      const { id, city, name, description, rating, distance, pictureId } = menu;
-      cardComponent += `<a id="${id}" class="card" href="#">
+    data.restaurants.forEach((restaurant, index) => {
+      const { id, city, name, description, rating, distance, pictureId } = restaurant;
+      const cardId = index == 0 ? "main-content" : id;
+
+      cardComponent += `<a id="${cardId}" class="card" href="#">
         <div class="card-img">
           <img src="${pictureId}" alt="Restaurant ${name}">
           <div class="verified-restaurant" title="Verified Restaurant">
@@ -44,16 +46,16 @@ class UI {
     const navbar = document.querySelector('.navbar-collapse');
 
     menu.addEventListener('click', function (event) {
-        navbar.classList.toggle('open');
-        event.stopPropagation();
+      navbar.classList.toggle('open');
+      event.stopPropagation();
     });
 
     hero.addEventListener('click', function () {
-        navbar.classList.remove('open');
+      navbar.classList.remove('open');
     });
 
     main.addEventListener('click', function () {
-        navbar.classList.remove('open');
+      navbar.classList.remove('open');
     });
   }
 
