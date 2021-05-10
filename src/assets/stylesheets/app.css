@@ -151,6 +151,11 @@ main {
   transform: translate3D(0, -1px, 0) scale(1.02);
 }
 
+a.card {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card-img {
   position: relative;
   flex: 1 1 auto;

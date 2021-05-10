@@ -1,14 +1,15 @@
 import data from '../../data.json';
 import { ellipsis } from 'ellipsed';
+import logo from '../images/logo.svg';
 
 class UI {
-  static renderRestaurantMenu() {
+  static renderRestaurantList() {
     const restaurantContainerElement = document.querySelector('.cards');
     let cardComponent = '';
 
     data.restaurants.forEach(menu => {
       const { id, city, name, description, rating, distance, pictureId } = menu;
-      cardComponent += `<div id="${id}" class="card">
+      cardComponent += `<a id="${id}" class="card" href="#">
         <div class="card-img">
           <img src="${pictureId}" alt="Restaurant ${name}">
           <div class="verified-restaurant" title="Verified Restaurant">
@@ -29,7 +30,7 @@ class UI {
           </div>
           <span class="text-small">${distance} km</span>
         </div>
-      </div>`;
+      </a>`;
     });
 
     restaurantContainerElement.innerHTML = cardComponent;
@@ -54,6 +55,10 @@ class UI {
     main.addEventListener('click', function () {
         navbar.classList.remove('open');
     });
+  }
+
+  static setBrandImage() {
+    document.querySelector('.navbar-brand img').src = logo;
   }
 }
 
