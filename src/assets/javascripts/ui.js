@@ -34,7 +34,6 @@ class UI {
     });
 
     restaurantContainerElement.innerHTML = cardComponent;
-    // ellipsis('.card-description', 5);
   }
 
   static setHamburgerMenu() {
