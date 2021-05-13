@@ -1,5 +1,4 @@
 import data from '../../data.json';
-import { ellipsis } from 'ellipsed';
 import logo from '../images/logo.svg';
 
 class UI {
@@ -35,7 +34,7 @@ class UI {
     });
 
     restaurantContainerElement.innerHTML = cardComponent;
-    ellipsis('.card-description', 5);
+    // ellipsis('.card-description', 5);
   }
 
   static setHamburgerMenu() {

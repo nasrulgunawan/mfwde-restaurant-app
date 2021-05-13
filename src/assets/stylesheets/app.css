@@ -158,6 +158,15 @@ a.card {
   color: inherit;
 }
 
+.card-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
 .card-img {
   position: relative;
   flex: 1 1 auto;
