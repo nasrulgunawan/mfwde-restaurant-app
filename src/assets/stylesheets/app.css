@@ -80,7 +80,9 @@ body {
 .navbar-toggler {
   font-size: 2rem;
   display: none;
-  padding: 0 .5rem !important;
+  padding: .25rem .5rem !important;
+  border: none;
+  background-color: #fff;
 }
 
 /* Hero */

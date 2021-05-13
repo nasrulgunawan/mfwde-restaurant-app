@@ -7,8 +7,7 @@ class UI {
     const restaurantContainerElement = document.querySelector('.cards');
     let cardComponent = '';
 
-    data.restaurants.forEach((restaurant, index) => {
-      const { id, city, name, description, rating, distance, pictureId } = restaurant;
+    data.restaurants.forEach(({id, city, name, description, rating, distance, pictureId}, index) => {
       const cardId = index == 0 ? "main-content" : id;
 
       cardComponent += `<a id="${cardId}" class="card" href="#">
