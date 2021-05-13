@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import data from '../../data.json';
 import logo from '../images/logo.svg';
 
@@ -6,8 +7,10 @@ class UI {
     const restaurantContainerElement = document.querySelector('.cards');
     let cardComponent = '';
 
-    data.restaurants.forEach(({id, city, name, description, rating, distance, pictureId}, index) => {
-      const cardId = index == 0 ? "main-content" : id;
+    data.restaurants.forEach(({
+      id, city, name, description, rating, distance, pictureId,
+    }, index) => {
+      const cardId = index == 0 ? 'main-content' : id;
 
       cardComponent += `<a id="${cardId}" class="card" href="#">
         <div class="card-img">
@@ -42,7 +45,7 @@ class UI {
     const main = document.querySelector('main');
     const navbar = document.querySelector('.navbar-collapse');
 
-    menu.addEventListener('click', event => {
+    menu.addEventListener('click', (event) => {
       navbar.classList.toggle('open');
       event.stopPropagation();
     });
